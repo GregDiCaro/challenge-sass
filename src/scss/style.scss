@@ -1,0 +1,115 @@
+@import "colors";
+@import "mixin";
+@import "function";
+
+$padding: 16px;
+
+body {
+  font: 100% "Space Mono", monospace;
+  color: $first;
+  margin: 0;
+  padding: $padding;
+  background-color: $fifth;
+  overflow-x: hidden;
+}
+main {
+  @include padding(0, 0);
+}
+article {
+  display: flex;
+  flex-wrap: wrap;
+
+  section {
+    flex-grow: 1;
+    flex-basis: 45%;
+    border: 1px $second solid;
+    @include box-shadow;
+
+    padding: $padding;
+    margin: 16px;
+    clear: both;
+    overflow: auto;
+    box-sizing: border-box;
+    #selling-points {
+      flex-grow: 2;
+      flex-basis: 100%;
+    }
+  }
+  code {
+    background: $third;
+    border: 1px solid $first;
+    color: $second;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: $padding;
+    display: block;
+    word-wrap: break-word;
+    .before {
+      float: left;
+      width: 40%;
+    }
+    .after {
+      float: right;
+      width: 40%;
+    }
+  }
+}
+h1,
+h2,
+h3 {
+  color: $fourth;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: $padding;
+  margin-bottom: 0px;
+}
+.messages {
+  padding: $padding;
+}
+
+// .success,
+// .error,
+// .warning {
+//   border: 1px solid $second;
+//   padding:  $padding; 16px;
+//   color: #fff;
+// }
+%reuse {
+  border: 1px solid $second;
+  padding: $padding;
+  color: $fifth;
+}
+.success {
+  @extend %reuse;
+  background-color: $sixth;
+}
+
+.error {
+  @extend %reuse;
+  background-color: $seventh;
+  &:hover {
+    background-color: $sixth;
+  }
+}
+
+.warning {
+  @extend %reuse;
+  background-color: $eighth;
+}
+footer {
+  h3 {
+    padding: multi($padding);
+  }
+}

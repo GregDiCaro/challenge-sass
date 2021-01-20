@@ -1,0 +1,23 @@
+{
+  "name": "challenge-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w src/scss -o src/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregDiCaro/challenge-sass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GregDiCaro/challenge-sass/issues"
+  },
+  "homepage": "https://github.com/GregDiCaro/challenge-sass#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

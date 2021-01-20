@@ -1,0 +1,8 @@
+@mixin box-shadow {
+  -webkit-box-shadow: 10px 10px 15px -4px #6b717f;
+  -moz-box-shadow: 10px 10px 15px -4px #6b717f;
+  box-shadow: 10px 10px 15px -4px #6b717f;
+}
+@mixin padding($top, $bot) {
+  padding: 16px * $top 16px * $bot;
+}
